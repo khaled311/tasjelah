@@ -96,7 +96,7 @@ ul.res {
           justify-content: center;
 }
 
-.trans, .upperBar .left .links a:last-child, header .content .top .left .search form input, header .content .bottom .navbar > ul > li:last-child > a:after, header .content .bottom .navbar > ul li a, header .content .bottom .navbar > ul li ul, header .content .bottom .navbar > ul li ul:after, .tasjeelah_posts .bottom_more_link a, .infographic_section .more_link, .tasjeelah_info .more_link, .testimonials_sec .more_link, .tasjeelah_apps .more_link, footer .foot-links a, footer .ex-links_footer a, footer .newsletter form input, footer .newsletter form button, footer .socials svg, footer .bottom_section .content.copyrights .top a, footer .bottom_section .content.copyrights .bottom_copyrights span a, .write_with_us_page form input, .write_with_us_page form .upload_file span, .write_with_us_page form button, .login_page form .field input, .login_page form button, .search_results_page .content ul li a, .search_results_page .content_bottom ul a, .register_page .head_content .socials a, .register_page form input, .register_page form button, .videos_page .box a span, .categories_page .content_bottom ul a, .testimonials .content_bottom ul a, .contact_page form input,
+.trans, .upperBar .left .links a:last-child, header .content .top .left .search form input, header .content .bottom .navbar > ul > li.menu-item-has-children > a:after, header .content .bottom .navbar > ul li a, header .content .bottom .navbar > ul li ul, header .content .bottom .navbar > ul li ul:after, .tasjeelah_posts .bottom_more_link a, .infographic_section .more_link, .tasjeelah_info .more_link, .testimonials_sec .more_link, .tasjeelah_apps .more_link, footer .foot-links a, footer .ex-links_footer a, footer .newsletter form input, footer .newsletter form button, footer .socials svg, footer .bottom_section .content.copyrights .top a, footer .bottom_section .content.copyrights .bottom_copyrights span a, .write_with_us_page form input, .write_with_us_page form .upload_file span, .write_with_us_page form button, .login_page form .field input, .login_page form button, .search_results_page .content ul li a, .search_results_page .content_bottom ul a, .register_page .head_content .socials a, .register_page form input, .register_page form button, .videos_page .box a span, .categories_page .content_bottom ul a, .testimonials .content_bottom ul a, .contact_page form input,
 .contact_page form textarea, .contact_page form button, .opinions_page .rating .radios .svg_container:after, .opinions_page .rating .radios .svg_container:before, .opinions_page .opinion textarea,
 .opinions_page .more_opinion textarea, .opinions_page button {
   -webkit-transition: 0.4s cubic-bezier(0.5, 1, 0.89, 1);
@@ -299,6 +299,7 @@ html[dir="ltr"] .sideNav.origin {
   transition: 0.5s;
   -webkit-transition-delay: 0.5s;
           transition-delay: 0.5s;
+  width: 100%;
 }
 
 .sideNav > ul::-webkit-scrollbar {
@@ -322,6 +323,7 @@ html[dir="ltr"] .sideNav.origin {
 .sideNav > ul > li {
   position: relative;
   padding: 7px 0;
+  width: 100%;
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: translateX(-10px);
@@ -369,7 +371,7 @@ html[dir="ltr"] .sideNav > ul > li {
           transition-delay: 1.4s;
 }
 
-.sideNav > ul > li:nth-child(7) > a {
+.sideNav > ul > li.menu-item-has-children > a {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -377,9 +379,13 @@ html[dir="ltr"] .sideNav > ul > li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
-.sideNav > ul > li:nth-child(7) > a:after {
+.sideNav > ul > li.menu-item-has-children > a:after {
   content: "";
   width: 0;
   height: 0;
@@ -389,6 +395,21 @@ html[dir="ltr"] .sideNav > ul > li {
   -webkit-transform: translateY(5px);
           transform: translateY(5px);
   margin-right: 5px;
+}
+
+.sideNav > ul > li.menu-item-has-children ul {
+  padding-right: 10px;
+  border-right: 1px solid #fff;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  margin: auto;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.sideNav > ul > li.menu-item-has-children ul a {
+  text-align: right;
 }
 
 .sideNav > ul > li:nth-child(8) {
@@ -418,51 +439,7 @@ html[dir="ltr"] .sideNav > ul > li {
   color: #fff;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-}
-
-.sideNav > ul > li i {
-  position: absolute;
-  top: 13px;
-  left: 13px;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  font-size: 9px;
-  color: currentColor;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-html[dir="ltr"] .sideNav > ul > li i {
-  left: unset;
-  right: 13px;
-}
-
-.sideNav > ul > li i.open {
-  -webkit-transform: rotate(0deg);
-          transform: rotate(0deg);
-}
-
-.sideNav > ul > li .drop {
-  width: 100%;
-  padding: 5px 15px;
-  display: none;
-  overflow: visible;
-  height: auto;
-}
-
-.sideNav > ul > li .drop li {
-  padding: 4px 0;
-}
-
-.sideNav > ul > li .drop li a {
-  font-size: 15px;
-  color: #898989;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.sideNav > ul > li .drop li a:hover {
-  color: #595959;
+  text-align: center;
 }
 
 .upperBar {
@@ -718,7 +695,7 @@ header .content .bottom .navbar > ul {
   width: 100%;
 }
 
-header .content .bottom .navbar > ul > li:last-child > a {
+header .content .bottom .navbar > ul > li.menu-item-has-children > a {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -728,7 +705,7 @@ header .content .bottom .navbar > ul > li:last-child > a {
           align-items: center;
 }
 
-header .content .bottom .navbar > ul > li:last-child > a:after {
+header .content .bottom .navbar > ul > li.menu-item-has-children > a:after {
   content: "";
   width: 0;
   height: 0;
@@ -740,7 +717,7 @@ header .content .bottom .navbar > ul > li:last-child > a:after {
   margin-right: 5px;
 }
 
-header .content .bottom .navbar > ul > li:last-child > a:hover:after {
+header .content .bottom .navbar > ul > li.menu-item-has-children > a:hover:after {
   border-top-color: var(--sec-color);
 }
 
@@ -811,7 +788,7 @@ header .content .bottom .navbar > ul li:hover ul {
           transform: translate(50%, -10px);
 }
 
-header .content .bottom .navbar > ul > li:last-child {
+header .content .bottom .navbar > ul > li.menu-item-has-children {
   padding-bottom: 20px;
   margin-top: 20px;
 }
@@ -1907,6 +1884,24 @@ footer .foot-links {
   footer .foot-links {
     margin-bottom: 20px;
   }
+}
+
+footer .foot-links ul {
+  max-height: 164px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+footer .foot-links ul li {
+  width: 50%;
 }
 
 footer .foot-links a {
