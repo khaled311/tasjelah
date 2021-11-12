@@ -3093,4 +3093,8 @@ footer .bottom_section .content.copyrights .bottom_copyrights span a:hover {
   border-radius: 50px !important;
 }
 
+.fancybox__content {
+  height: 100% !important;
+}
+
 /*# sourceMappingURL=home.css.map */
